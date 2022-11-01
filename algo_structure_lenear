@@ -23,7 +23,6 @@ BEGIN
     END_FOR
 END
 
-ALGORITHM elements_overlapping_
 VAR
     Array1 : Array INTEGER [];
     Array2 : Array INTEGER [];
@@ -31,7 +30,7 @@ VAR
 BEGIN
    FOR i FROM 0 TO Array1.lenght-1 STEP 1  DO
     FOR k FROM 0 TO Array2.lenght-1 STEP step  DO
-        IF (Array1[i] = Array2[k]) THEN
+        IF (Array2[k] = Array1[i]) THEN
             sum := sum + Array1[i] + Array2[j];  
         END_IF
     END_FOR
